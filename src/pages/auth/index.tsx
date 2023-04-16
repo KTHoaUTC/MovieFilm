@@ -1,6 +1,6 @@
-import AuthLogin from "@/containers/login";
+import HomeAuth from "@/containers/auth";
 import "../../styles/globals.scss";
 
 export default function Home() {
-  return <AuthLogin />;
+  return <HomeAuth />;
 }

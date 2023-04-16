@@ -1,6 +1,6 @@
-import AuthLogin from "@/containers/login";
+import AdminIndex from "@/containers/admin";
 import "../../styles/globals.scss";
 
 export default function Home() {
-  return <AuthLogin />;
+  return <AdminIndex />;
 }

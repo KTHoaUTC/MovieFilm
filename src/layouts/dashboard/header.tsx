@@ -16,7 +16,7 @@ const HeaderLoginAuth = () => {
         </Col>
         <Col className={styles.col_right} span={8}>
           <Button className={styles.btn_login_auth}>Đăng Nhập</Button>
-          <Button className={styles.btn_logout_auth}>Đăng Xuất</Button>
+          <Button className={styles.btn_logout_auth}>Đăng Ký</Button>
         </Col>
       </Row>
     </>

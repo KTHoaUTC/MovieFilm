@@ -1,4 +1,4 @@
-.contanier{
+.contanier {
     height: 100vh;
     background-image: url(../../../public/Sneaker_20Store.jpg);
 }
@@ -10,7 +10,6 @@
     width: 68%;
     height: 65%;
     margin: 8rem;
-    text-align: center;
     align-items: center;
     border-radius: 30px;
 
@@ -26,42 +25,35 @@
 
     .context {
         .title {
-            padding-top: 1rem;
+            text-align: center;
             font-style: normal;
             font-weight: 600;
-            font-size: 2.3rem;
+            font-size: 2.5rem;
             line-height: 5rem;
             color: #212121;
         }
 
         .form {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
+            padding: 0 1.5rem;
             width: 100%;
 
             .form1 {
+                margin-top: 1rem;
                 width: 100%;
 
                 .form_item {
                     font-weight: 500;
                     font-size: 1rem;
-                    line-height: 24px;
-
-                    .span_required {
-                        color: rgb(212, 44, 44);
-
-                    }
                 }
 
                 .form_input {
-                    margin-top: 0.8rem;
-                    margin-bottom: 1rem;
                     width: 100%;
                     height: 3rem;
                 }
             }
 
             .remember {
+                display: flex;
                 width: 50rem;
                 font-style: normal;
                 font-weight: 500;
@@ -82,7 +74,6 @@
             }
 
             .btnLogin {
-                margin-top: 3rem;
                 width: 100%;
                 height: 3rem;
                 background: rgba(239, 80, 80, 1);
@@ -91,6 +82,34 @@
                 line-height: 24px;
 
             }
+
+            p {
+                text-align: center;
+                margin: 1rem auto;
+            }
+
+            .login_diffrent {
+                display: flex;
+
+                .LoginGoogle {
+                    width: 50%;
+                    margin-right: 1rem;
+                }
+
+                .LoginGib {
+                    width: 50%;
+                }
+            }
         }
+    }
+}
+
+.title_register {
+    text-align: center;
+    align-items: center;
+
+    .register {
+        cursor: pointer;
+        color: red;
     }
 }

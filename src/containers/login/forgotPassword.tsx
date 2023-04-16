@@ -22,17 +22,21 @@ const AuthLogin = () => {
           >
             <div className={styles.form1}>
               <Form.Item
-                label="Email"
+                label={<p className={styles.formItem}>Email</p>}
                 name="username"
                 rules={[
                   {
                     required: true,
-                    message: "  Không được để trống ô này !",
+                    message: (
+                      <p className={styles.formError}>
+                        Không được để trống ô này !
+                      </p>
+                    ),
                   },
                 ]}
               >
                 <Input
-                  className={styles.form_input}
+                  className={styles.formInput}
                   type="email"
                   size="large"
                   placeholder="Nhập địa chỉ email"
@@ -41,17 +45,21 @@ const AuthLogin = () => {
             </div>
             <div className={styles.form1}>
               <Form.Item
-                label="Mật khẩu"
+                label={<p className={styles.formItem}>Mật khẩu</p>}
                 name="password"
                 rules={[
                   {
                     required: true,
-                    message: "  Không được để trống ô này !",
+                    message: (
+                      <p className={styles.formError}>
+                        Không được để trống ô này !
+                      </p>
+                    ),
                   },
                 ]}
               >
                 <Input.Password
-                  className={styles.form_input}
+                  className={styles.formInput}
                   type="email"
                   size="large"
                   placeholder="Nhập mật khẩu"
@@ -74,34 +82,12 @@ const AuthLogin = () => {
               >
                 Đăng nhập
               </Button>
-              <p> Or </p>
-              <div className={styles.login_diffrent}>
-                <Button
-                  className={styles.LoginGoogle}
-                  type="primary"
-                  htmlType="submit"
-                >
-                  Đăng nhập bằng Google
-                </Button>
-                <Button
-                  className={styles.LoginGib}
-                  type="primary"
-                  htmlType="submit"
-                >
-                  Đăng nhập bằng GibHub
-                </Button>
-              </div>
+              <p> Or  </p>
+            
             </Form.Item>
             <Link href="/auth/UserForgotPass" className={styles.forgotPassword}>
-              <p>Quên mật khẩu?</p>
+              Quên mật khẩu?
             </Link>
-            <p className={styles.title_register}>
-              Bạn chưa có tài khoản.
-              <span className={styles.register}>
-                {" "}
-                Vui lòng đăng kí tại đây!!
-              </span>
-            </p>
           </Form>
         </Col>
       </Row>
