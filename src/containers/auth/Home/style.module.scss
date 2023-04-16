@@ -1,0 +1,58 @@
+.img_header {
+    margin-left: 10rem;
+}
+
+.btn_login_auth {
+    height: 2.5rem;
+    border: 1px solid rgb(216, 108, 108);
+    margin-right: 3rem;
+    padding: 0 2rem;
+    font-size: 1.1rem;
+
+}
+
+.btn_logout_auth {
+    height: 2.5rem;
+    border: 1px solid rgb(216, 108, 108);
+    padding: 0 2rem;
+    font-size: 1.1rem;
+    margin-right: 5rem;
+}
+
+.tabs {
+    margin-top: 2rem;
+
+    div:nth-child(1) {
+        margin-top: 0 !important;
+    }
+
+    p:nth-child(1) {
+        font-size: 1.3rem !important;
+
+    }
+}
+
+.carousel_img {
+    div:nth-child(1) {
+        text-align: center;
+        align-items: center;
+        display: flex !important;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    .img {
+        background-size: cover;
+    }
+}
+
+.list {
+    margin: 2rem 4rem !important;
+
+    .card_item {
+
+        .book_ticket {
+           
+        }
+    }
+}

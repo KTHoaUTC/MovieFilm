@@ -74,21 +74,21 @@ const AuthLogin = () => {
               >
                 Đăng nhập
               </Button>
-              <p> Or </p>
+              <p> — Or Sign In With — </p>
               <div className={styles.login_diffrent}>
                 <Button
                   className={styles.LoginGoogle}
                   type="primary"
                   htmlType="submit"
                 >
-                  Đăng nhập bằng Google
+                  Google
                 </Button>
                 <Button
                   className={styles.LoginGib}
                   type="primary"
                   htmlType="submit"
                 >
-                  Đăng nhập bằng GibHub
+                  GibHub
                 </Button>
               </div>
             </Form.Item>

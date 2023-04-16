@@ -1,16 +1,13 @@
-import HeaderLoginAuth from "@/layouts/dashboard/header";
-import HomeFooter from "./footer";
-import SlideHome from "./slide";
-// import styles from "./style.module.scss";
+import ContentHome from "./Home/Content";
+import SlideHome from "./Home/Slide";
+import Map from "./Map";
 const HomeAuth = () => {
   return (
-    <div className="contanier">
-      <HeaderLoginAuth></HeaderLoginAuth>
-  
+    <>
       <SlideHome></SlideHome>
-
-      <HomeFooter></HomeFooter>
-    </div>
+      <ContentHome></ContentHome>
+      <Map></Map>
+    </>
   );
 };
 
