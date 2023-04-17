@@ -30,7 +30,7 @@ const Header = () => {
         </Col>
         <Col className={styles.right} span={8}>
           <Link legacyBehavior href="/login">
-          <Button className={styles.btn_login_auth}>Đăng Nhập</Button>
+            <Button className={styles.btn_login_auth}>Đăng Nhập</Button>
           </Link>
           <Button className={styles.btn_logout_auth}>Đăng Ký</Button>
         </Col>

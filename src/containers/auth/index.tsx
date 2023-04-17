@@ -1,12 +1,15 @@
 import ContentHome from "./Home/Content";
 import SlideHome from "./Home/Slide";
+import Theater from "./Home/Theater";
 import Map from "./Map";
 const HomeAuth = () => {
   return (
     <>
       <SlideHome></SlideHome>
       <ContentHome></ContentHome>
-      <Map></Map>
+    
+      <Theater></Theater>
+        <Map></Map>
     </>
   );
 };

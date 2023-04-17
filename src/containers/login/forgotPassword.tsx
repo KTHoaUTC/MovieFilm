@@ -5,7 +5,8 @@ import styles from "./style.module.scss";
 const AuthLogin = () => {
   return (
     <div className={styles.contanier}>
-      <HeaderLoginAuth></HeaderLoginAuth>
+      <p> ddd</p>
+      {/* <HeaderLoginAuth></HeaderLoginAuth> */}
       <Row className={styles.login}>
         <Col className={styles.imgLogin} span={11}>
           <img className={styles.img} src="/PopcornStore.png" alt="" />

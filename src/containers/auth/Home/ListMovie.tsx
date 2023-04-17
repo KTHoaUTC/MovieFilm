@@ -1,6 +1,8 @@
-import { Card, List } from "antd";
+import { Button, Card, List } from "antd";
 import React from "react";
 import styles from "./style.module.scss";
+import ModalDetail from "./ModalDetail";
+import Link from "next/link";
 const { Meta } = Card;
 const data = Array.from({ length: 23 }).map((_, i) => ({
   href: "https://ant.design",
@@ -41,10 +43,13 @@ const ListMovie: React.FC = () => {
               cover={<img alt="example" src="/movie1movie1.jpg" />}
             >
               <Meta title="Batman" description="www.instagram.com" />
-              {/* <Button className={styles.book_ticket}>Đặt vé</Button> */}
+              <div>
+                <ModalDetail></ModalDetail>
+                <Link legacyBehavior href={"/bookticker"}>
+                  <Button className={styles.book_ticket}>Dat Ve</Button>
+                </Link>
+              </div>
             </Card>
-
-            
           </List.Item>
         )}
       />

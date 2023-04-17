@@ -1,4 +1,4 @@
-import { Card, List } from "antd";
+import { Button, Card, List } from "antd";
 import React from "react";
 import styles from "./style.module.scss";
 const { Meta } = Card;
@@ -38,10 +38,17 @@ const ListMovieStop: React.FC = () => {
             <Card
               className={styles.card_item}
               hoverable
-              cover={<img alt="example" src="/movie2movie2.jpg" />}
+              cover={
+                <img
+                  className={styles.img}
+                  alt="example"
+                  src="/movie2movie2.jpg"
+                />
+              }
             >
               <Meta title="Batman" description="www.instagram.com" />
-              {/* <Button className={styles.book_ticket}>Đặt vé</Button> */}
+              <Button className={styles.book_ticket}>Xem Chi Tiết</Button>
+              <Button className={styles.book_ticket}>Dat Ve</Button>
             </Card>
           </List.Item>
         )}
