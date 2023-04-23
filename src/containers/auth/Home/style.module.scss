@@ -43,6 +43,10 @@
 
     .img {
         background-size: cover;
+        // width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        // background-size: cover;
     }
 }
 
@@ -130,6 +134,12 @@
 
 }
 
+.btn_next {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+    height: 2.5rem;
+}
+
 .step_1 {
     h1 {
 
@@ -142,8 +152,8 @@
 
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    border: 1px solid rgb(219, 42, 42);
+    // border-radius: 20px;
+    // border: 1px solid rgb(219, 42, 42);
     width: 70%;
 
     .step_ {
@@ -164,6 +174,24 @@
                 padding-bottom: 2rem;
             }
 
+            .list_scroll {
+                overflow: scroll;
+                border-radius: 20px;
+                border: 1px solid rgb(206, 41, 41);
+
+                .list_date {
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    width: 140px;
+                    height: 70px;
+                    text-align: center;
+                    line-height: 20px;
+                    cursor: pointer;
+                    padding: 1rem 0.3rem;
+                    margin: 15px;
+                }
+            }
+
             .panel {
                 font-size: 1.2rem;
 
@@ -176,4 +204,50 @@
     }
 
 
+}
+
+/* Lớp CSS cho ghế trống */
+.empty-seat {
+    background-color: green;
+}
+
+/* Lớp CSS cho ghế đã chọn */
+.selected-seat {
+    background-color: yellow;
+}
+
+/* Lớp CSS cho ghế đã bán */
+.booked-seat {
+    background-color: red;
+}
+
+.note_seat {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .icon_seat {
+        margin-left: 2rem;
+      
+
+        .icon_seat_empty {
+            font-size: 2rem;
+            background-color: green;
+            border: none;
+        }
+
+        .icon_seat_booked {
+            background-color: yellow;
+            font-size: 2rem;
+        }
+
+        .icon_seat_select {
+            background-color: red;
+            font-size: 2rem;
+        }
+    }
 }

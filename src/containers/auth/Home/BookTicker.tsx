@@ -1,21 +1,19 @@
-import React, { useState } from "react";
 import {
   Button,
-  Card,
   Col,
   Collapse,
-  DatePicker,
+  Image,
   message,
   Row,
   Steps,
-  theme,
+  theme
 } from "antd";
-import { UserOutlined } from "@ant-design/icons";
-import styles from "./style.module.scss";
-import { Image } from "antd";
-const { Panel } = Collapse;
 import dayjs from "dayjs";
 import "dayjs/locale/vi"; // Nếu muốn hiển thị ngôn ngữ Tiếng Việt
+import React, { useState } from "react";
+import SeatButtons from "./Seat";
+import styles from "./style.module.scss";
+const { Panel } = Collapse;
 
 dayjs.locale("vi"); // Nếu muốn hiển thị ngôn ngữ Tiếng Việt
 
@@ -29,18 +27,18 @@ const BookTicker: React.FC = () => {
   const prev = () => {
     setCurrent(current - 1);
   };
-const [selectedDate, setSelectedDate] = useState<dayjs.Dayjs | null>(dayjs());
-const startOfMonth = selectedDate?.startOf("month");
-const endOfMonth = selectedDate?.endOf("month");
-const datesOfMonth = [];
-let currentDate = startOfMonth;
+  const [selectedDate, setSelectedDate] = useState<dayjs.Dayjs | null>(dayjs());
+  const startOfMonth = selectedDate?.startOf("month");
+  const endOfMonth = selectedDate?.endOf("month");
+  const datesOfMonth = [];
+  let currentDate = startOfMonth;
 
-if (endOfMonth) {
-  while (currentDate && currentDate <= endOfMonth) {
-    datesOfMonth.push(currentDate);
-    currentDate = currentDate.add(1, "day");
+  if (endOfMonth) {
+    while (currentDate && currentDate <= endOfMonth) {
+      datesOfMonth.push(currentDate);
+      currentDate = currentDate.add(1, "day");
+    }
   }
-}
 
   const steps = [
     {
@@ -54,25 +52,16 @@ if (endOfMonth) {
             <Col className={styles.step_img} span={10} offset={2}>
               <Image width={450} height={500} src="/doremon.jpg" />
             </Col>
-            <Col className={styles.step_content} span={10} offset={2}>
+            <Col className={styles.step_content} span={11} offset={2} >
               <h2>Chọn ngày xem phim:</h2>
-
-              <div style={{ overflowX: "scroll", borderRadius:'20px', border: "1px solid red"}}>
+              <div className={styles.list_scroll}>
                 <div style={{ display: "flex" }}>
                   {datesOfMonth.map((date) => (
                     <div
+                      className={styles.list_date}
                       key={date.format("DD-MM-YYYY")}
                       onClick={() => setSelectedDate(date)}
                       style={{
-                        border: "1px solid #ddd",
-                        borderRadius: "10px",
-                        width: "140px",
-                        height: "70px",
-                        textAlign: "center",
-                        lineHeight: "20px",
-                        cursor: "pointer",
-                        padding: "1rem 0.3rem",
-                        margin: "15px",
                         backgroundColor: date.isSame(selectedDate, "day")
                           ? "#1890ff"
                           : "#fff",
@@ -118,20 +107,14 @@ if (endOfMonth) {
               </Collapse>
             </Col>
           </Row>
+          
         </div>
       ),
     },
-    {
-      title: "Chọn vé",
-      content: "First-content",
-    },
+
     {
       title: "Chọn ghế ngồi",
-      content: "Second-content",
-    },
-    {
-      title: "Chọn đồ ăn",
-      content: "Last-content",
+      content: <SeatButtons></SeatButtons>,
     },
     {
       title: "Xác nhận",
@@ -153,13 +136,9 @@ if (endOfMonth) {
       <Steps className={styles.step} current={current} items={items} />
       <div style={contentStyle}>{steps[current].content}</div>
       <div style={{ textAlign: "center", marginTop: 24, marginBottom: 24 }}>
-        {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
-            Tiếp Theo
-          </Button>
-        )}
         {current === steps.length - 1 && (
           <Button
+            className={styles.btn_next}
             type="primary"
             onClick={() => message.success("Processing complete!")}
           >
@@ -167,8 +146,21 @@ if (endOfMonth) {
           </Button>
         )}
         {current > 0 && (
-          <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+          <Button
+            className={styles.btn_next}
+            style={{ margin: "0 8px" }}
+            onClick={() => prev()}
+          >
             Quay Lại
+          </Button>
+        )}
+        {current < steps.length - 1 && (
+          <Button
+            className={styles.btn_next}
+            type="primary"
+            onClick={() => next()}
+          >
+            Tiếp Theo
           </Button>
         )}
       </div>
