@@ -17,9 +17,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/admin">
+              {/* <Link legacyBehavior href="/admin"> */}
                 <a>Cụm Rạp</a>
-              </Link>
+              {/* </Link> */}
             </li>
             <li>
               <Link legacyBehavior href="/login">

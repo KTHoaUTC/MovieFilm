@@ -42,11 +42,13 @@ const ListMovie: React.FC = () => {
               hoverable
               cover={<img alt="example" src="/movie1movie1.jpg" />}
             >
-              <Meta title="Batman" description="www.instagram.com" />
+              {/* <Meta title="Batman" description="www.instagram.com" /> */}
+              <Meta className={styles.meta} title="Batman" />
+
               <div>
                 <ModalDetail></ModalDetail>
                 <Link legacyBehavior href={"/bookticker"}>
-                  <Button className={styles.book_ticket}>Dat Ve</Button>
+                  <Button className={styles.book_ticket}>Đặt Vé</Button>
                 </Link>
               </div>
             </Card>

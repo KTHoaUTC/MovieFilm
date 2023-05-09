@@ -1,13 +1,4 @@
-import {
-  Button,
-  Col,
-  Collapse,
-  Image,
-  message,
-  Row,
-  Steps,
-  theme
-} from "antd";
+import { Button, Col, Collapse, Image, message, Row, Steps, theme } from "antd";
 import dayjs from "dayjs";
 import "dayjs/locale/vi"; // Nếu muốn hiển thị ngôn ngữ Tiếng Việt
 import React, { useState } from "react";
@@ -52,7 +43,7 @@ const BookTicker: React.FC = () => {
             <Col className={styles.step_img} span={10} offset={2}>
               <Image width={450} height={500} src="/doremon.jpg" />
             </Col>
-            <Col className={styles.step_content} span={11} offset={2} >
+            <Col className={styles.step_content} span={11} offset={2}>
               <h2>Chọn ngày xem phim:</h2>
               <div className={styles.list_scroll}>
                 <div style={{ display: "flex" }}>
@@ -107,14 +98,20 @@ const BookTicker: React.FC = () => {
               </Collapse>
             </Col>
           </Row>
-          
         </div>
       ),
     },
 
     {
       title: "Chọn ghế ngồi",
-      content: <SeatButtons></SeatButtons>,
+      content: (
+        <div className={styles.step_1}>
+          <Row>
+            <h1> Chọn ghế ngồi</h1>
+          </Row>
+          <SeatButtons></SeatButtons>
+        </div>
+      ),
     },
     {
       title: "Xác nhận",

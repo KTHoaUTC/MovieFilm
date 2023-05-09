@@ -46,9 +46,9 @@ const ListMovieStop: React.FC = () => {
                 />
               }
             >
-              <Meta title="Batman" description="www.instagram.com" />
+              <Meta title="Batman" />
               <Button className={styles.book_ticket}>Xem Chi Tiết</Button>
-              <Button className={styles.book_ticket}>Dat Ve</Button>
+              <Button className={styles.book_ticket}>Đặt Vé</Button>
             </Card>
           </List.Item>
         )}
