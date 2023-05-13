@@ -5,11 +5,16 @@
 .row_header {
     text-align: center;
     align-items: center;
+    background-color: rgb(165, 189, 199);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 
     .left {
         justify-content: center;
-            display: flex;
-            align-items: center;
+        display: flex;
+        align-items: center;
     }
 
     .center {
@@ -24,6 +29,12 @@
             li {
                 font-size: 1.4rem;
                 padding-right: 2rem;
+                a{
+                    color: rgb(214, 22, 22);
+                    &:hover{
+                        color: white;
+                    }
+                }
             }
         }
     }

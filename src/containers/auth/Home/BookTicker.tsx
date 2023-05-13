@@ -89,7 +89,7 @@ const BookTicker: React.FC = () => {
                 </Panel>
                 <Panel
                   className={styles.panel}
-                  header="BHH Star 3.2 Kiến Xương, Thái Bình"
+                  header="BHH Star 3.4 Hồ Tây, Hà Nội"
                   key="3"
                 >
                   <Button className={styles.btn_time}>09:00 AM</Button>
@@ -130,18 +130,12 @@ const BookTicker: React.FC = () => {
 
   return (
     <>
+      <h2 className={styles.title_book} style={{ marginTop: "8rem" }}>
+        ĐẶT VÉ
+      </h2>
       <Steps className={styles.step} current={current} items={items} />
       <div style={contentStyle}>{steps[current].content}</div>
       <div style={{ textAlign: "center", marginTop: 24, marginBottom: 24 }}>
-        {current === steps.length - 1 && (
-          <Button
-            className={styles.btn_next}
-            type="primary"
-            onClick={() => message.success("Processing complete!")}
-          >
-            Hoàn Thành
-          </Button>
-        )}
         {current > 0 && (
           <Button
             className={styles.btn_next}
@@ -158,6 +152,15 @@ const BookTicker: React.FC = () => {
             onClick={() => next()}
           >
             Tiếp Theo
+          </Button>
+        )}{" "}
+        {current === steps.length - 1 && (
+          <Button
+            className={styles.btn_next}
+            type="primary"
+            onClick={() => message.success("Processing complete!")}
+          >
+            Hoàn Thành
           </Button>
         )}
       </div>

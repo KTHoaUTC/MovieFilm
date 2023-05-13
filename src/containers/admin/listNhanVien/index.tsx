@@ -6,6 +6,7 @@ import { Button, Popconfirm, Skeleton, Space, Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { useEffect, useState } from "react";
 import styles from "./style.module.scss";
+import ModalAdd from "./addList";
 
 interface DataType {
   id: number;
@@ -20,7 +21,7 @@ export default function NhanVien({}: any, props: any) {
   useEffect(() => {
     (async () => {
       try {
-       // const nhanviens = await apis.getDataNhanVien();
+        // const nhanviens = await apis.getDataNhanVien();
         setNhanViens(nhanviens);
       } catch (e) {
       } finally {
@@ -29,7 +30,7 @@ export default function NhanVien({}: any, props: any) {
     })();
   }, []);
   const handleDelete = async (id: number) => {
-  //  await apis.DeleteDataNhanVien(id);
+    //  await apis.DeleteDataNhanVien(id);
     setNhanViens(nhanviens.filter((item) => item.id !== id));
   };
   const columns: ColumnsType<DataType> = [
@@ -108,7 +109,12 @@ export default function NhanVien({}: any, props: any) {
           });
         }}
       /> */}
-      <Table className={styles.table_list} columns={columns} dataSource={nhanviens} />
+      <ModalAdd></ModalAdd>
+      <Table
+        className={styles.table_list}
+        columns={columns}
+        dataSource={nhanviens}
+      />
     </>
   );
 }

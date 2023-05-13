@@ -18,12 +18,12 @@ const Header = () => {
             </li>
             <li>
               {/* <Link legacyBehavior href="/admin"> */}
-                <a>Cụm Rạp</a>
+              <a>Cụm Rạp</a>
               {/* </Link> */}
             </li>
             <li>
               <Link legacyBehavior href="/login">
-                <a>Tin Tức</a>
+                <a>Lịch sử</a>
               </Link>
             </li>
           </ul>
@@ -32,9 +32,12 @@ const Header = () => {
           <Link legacyBehavior href="/login">
             <Button className={styles.btn_login_auth}>Đăng Nhập</Button>
           </Link>
-          <Button className={styles.btn_logout_auth}>Đăng Ký</Button>
+          <Link legacyBehavior href="/dangky">
+            <Button className={styles.btn_logout_auth}>Đăng Ký</Button>
+          </Link>
         </Col>
       </Row>
+      {/* <hr></hr> */}
     </>
   );
 };

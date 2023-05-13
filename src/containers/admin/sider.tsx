@@ -6,7 +6,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import type { MenuProps } from "antd";
+import { Button, MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import HeaderLoginAuth from "@/layouts/dashboard/header";
 import Link from "next/link";
@@ -45,29 +45,32 @@ const SiderAdmin: React.FC = () => {
   } = theme.useToken();
 
   return (
-      <Sider
-        style={{ backgroundColor: "white " }}
-        collapsible
-        collapsed={collapsed}
-        onCollapse={(value) => setCollapsed(value)}
+    <Sider
+      style={{ backgroundColor: "white " }}
+      collapsible
+      collapsed={collapsed}
+      onCollapse={(value) => setCollapsed(value)}
+    >
+      <Link legacyBehavior href={'/admin/infor'}>
+       <div
+        style={{
+          height: 22,
+          margin: 26,
+          textAlign:'center'
+        }}
       >
-        <div
-          style={{
-            height: 52,
-            margin: 26,
-            background: "red",
-          }}
-        ></div>
-
-        <Menu
-          theme="light"
-          defaultSelectedKeys={["1"]}
-          mode="inline"
-          items={items}
-          //  style={{margin:'0 0rem', padding:'0 1rem'}}
-        />
-      </Sider>
+       <Button>Thông tin </Button> 
+      </div>
+      </Link>
      
+
+      <Menu
+        theme="light"
+        defaultSelectedKeys={["1"]}
+        mode="inline"
+        items={items}
+      />
+    </Sider>
   );
 };
 

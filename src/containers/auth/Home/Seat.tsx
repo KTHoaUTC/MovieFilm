@@ -81,16 +81,6 @@ const SeatButtons = () => {
       updatedSeats.reduce((total, seat) => total + defaultTicketPrice, 0)
     );
   };
-  const SelectedSeats = () => {
-    return (
-      <div>
-        <h2>Danh sách ghế đã chọn:</h2>
-        {selectedSeats.map((seatNumber) => (
-          <p key={seatNumber}>Ghế số {seatNumber}</p>
-        ))}
-      </div>
-    );
-  };
   return (
     <>
       <Row>
@@ -136,16 +126,13 @@ const SeatButtons = () => {
                   {selectedSeats.map((seat) => (
                     <div className={styles.list_seat}>
                       <li key={seat}>Ghế số {seat}</li>
-                      <div>
-                        <button onClick={handleDecreaseQuantity}>-</button>
-                        <span>{ticketQuantity}</span>
-                        <button onClick={handleIncreaseQuantity}>+</button>
-                      </div>
-                      <div className={styles.price}>{ticketPrice}</div>
                     </div>
                   ))}
                 </ul>
-                <p className={styles.sum_price}>Tổng thành tiền: {totalPrice} VND</p>
+                <hr></hr>
+                <p className={styles.sum_price}>
+                  Thành Tiền: {totalPrice} VND
+                </p>
               </div>
             )}
           </div>
